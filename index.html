@@ -182,7 +182,9 @@
       }
 
       /* Custom */
-
+      .email-wrapper {
+        margin-bottom: 10px;
+      }
       .preference-choice-header {
         text-transform: uppercase;
       }
@@ -282,14 +284,15 @@
                 method="POST"
                 autocomplete="off"
                 data-nl-format="datetime">
-            <div>
-              <label class="stacked required" id="HtmlPage_htmlPage.email">Email</label>
-              <input class="stacked nl-dce-done"
+            <div class="email-wrapper">
+              <label class="" id="HtmlPage_htmlPage.email">
+                Email Address:
+              </label>
+              <input class="nl-dce-done"
                      type="email"
                      id="email"
                      name="email"
-                     data-nl-ismandatory="true"
-                     data-nl-label="Email"
+                     data-nl-label="Email Address:"
                      data-nl-xpath="/context/profile/email"
                      data-nl-type="string"
                      readonly="readonly"
@@ -297,7 +300,6 @@
                      data-nl-checkboxbehavior="subscription"
                      style="position: static; width: 100%px; height: 100%px; left: 0px; top: 0px; border-color: #555555; border-width: 0px; border-style: none; background-color: #fafafa; background-position: left top; background-repeat: repeat;" />
             </div>
-            <p data-nl-format="datetime"></p>
             <!-- List1 -->
             <div data-nl-format="datetime">
               <span class="preference-choice-header" style="color: #030303;">
