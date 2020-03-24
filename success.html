@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale = 1.0,maximum-scale = 2.0">
+    <title data-nl-localizable="true">Abonnement</title>
+    <style type="text/css" media="all">
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+          background-color: #DDD;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 12px;
+          color: #999;
+      }
+
+      .section {
+        background-color: #FFF;
+      }
+
+      .block {
+        max-width: 610px;
+        margin: 0 auto;
+      }
+
+
+      #wrap {
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .view-online-notice {
+        text-align: right;
+        margin: 5px 0;
+      }
+
+      /* header area */
+
+      .header-text {
+        font-size: 34px;
+        line-height: 34px;
+        color: #BBB;
+        margin: 25px 25px 20px;
+      }
+
+      .header-title {
+        float: left;
+      }
+
+      .header-subtitle {
+        float: right;
+        font-size:24px;
+        line-height:24px;
+        font-weight:300;
+        color:#777777;
+      }
+
+
+      /* button styles */
+      .button {
+        border-radius: 3px;
+        color: white;
+        padding: 1px;
+        cursor:pointer;
+        background: white;
+        text-align: center;
+        display: inline-block;
+        background: #378AD8;
+        background-image: linear-gradient(top, #348AD5, #378AD8);
+        background-image: -webkit-linear-gradient(top, #348AD5, #378AD8);
+        background-image: -moz-linear-gradient(top, #348AD5, #378AD8);
+        background-image: -ms-linear-gradient(top, #348AD5, #378AD8);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #348AD5), color-stop(100%, #378AD8));
+        box-shadow: 0px 1px 4px #AAA;
+        margin: 15px 0 35px;
+      }
+
+      .button a {
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px;
+      }
+
+      .large-button {
+        font-size: 18px;
+      }
+
+      .large-button a {
+        padding: 8px 10px;
+      }
+
+      /* formulary */
+
+
+      /* content */
+      #content {
+        font-size: 14px;
+      }
+
+      #content .title {
+        font-size:18px;
+        line-height:22pt;
+        color:#333;
+        font-weight:normal;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #E2E2E2;
+        padding-bottom: 10px;
+      }
+
+      #content .sub-title {
+        border: none;
+        font-size:22px;
+        line-height:22pt;
+        color:#333;
+        font-weight:normal;
+      }
+
+      .check:before {
+        content: url('/nms/img/contentModels/icon_check.png');
+        margin-right: 10px;
+      }
+
+
+      #content .title-unsubscribe {
+        color: #368AD7;
+      }
+
+      #content .info {
+        padding: 25px 25px 20px;
+      }
+
+      .form {
+        margin: 20px auto;
+        width: 80%;
+      }
+
+      .form .stacked {
+        display: block;
+        margin: 5px 0;
+        width: 100%;
+      }
+
+      .form .required:after {
+        content: '*';
+        color: red;
+      }
+
+      .form label {
+        font-size: 14px;
+      }
+
+      .form input {
+        height: 40px;
+        background: #FAFAFA;
+        border-radius: 1px;
+        border: none;
+        box-shadow: inset 0px 0px 1px 1px #DCDCDC;
+        color: #555;
+        padding: 5px 15px;
+      }
+
+
+      /* footer */
+      #footer {
+        text-align: center;
+        height: 20px;
+      }
+
+      #footer a {
+        color: #368AD7;
+      }
+
+      .footer-row {
+        margin: 10px 0;
+      }
+
+
+      .info .title {
+        margin-bottom: 4px;
+      }
+
+      @media screen and (max-width: 610px) {
+        body, html {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .banner, .form {
+          width: 100%;
+        }
+
+        .header-text {
+          float: none;
+          line-height: inherit;
+        }
+
+        .view-online-notice {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body style="" class="">
+    <div id="wrap" class="block">
+      <div id="header" class="radius section block">
+        <div class="header-text header-title section">
+          <span class="nl-dce-fragment nl-dce-done"
+                data-nl-name="BrandingLogo"
+                data-nl-label="Logo de la marque (BrandingLogo)"
+                data-nl-localizable="true"
+                id="brandingLogo"
+                contenteditable="false">
+            Logo de la marque
+          </span>
+        </div>
+        <div class="header-text header-subtitle section"></div>
+        <img src="/nms/img/contentModels/main_default.jpg"
+             alt=""
+             class="banner" />
+      </div>
+      <div id="content" class="radius section">
+        <div class="info">
+          <div class="title">
+            <span data-nl-localizable="true"
+                  id="HtmlPage_htmlPage2.line1Part1">
+              Vous êtes maintenant
+            </span>
+            <span data-nl-localizable="true"
+                  id="HtmlPage_htmlPage2.line1Part2"
+                  class="title-unsubscribe">
+              abonné
+            </span>
+            <span data-nl-localizable="true"
+                  id="HtmlPage_htmlPage2.line1Part3"></span>
+          </div>
+          <div data-nl-localizable="true"
+               id="HtmlPage_htmlPage2.line2"
+               class="sub-title title">
+            Bienvenue,
+          </div>
+          <% if(context.service.publicLabel) {%>
+            <div>
+              <span data-nl-localizable="true"
+                    id="HtmlPage_htmlPage2.line3Part1">
+                Votre abonnement au service
+              </span>
+              <span data-nl-localizable="true"
+                    id="publicLabel"
+                    class="nl-dce-field nl-dce-done"
+                    data-nl-expr="/context/service/publicLabel"
+                    contenteditable="false">Libellé public</span>
+              <span data-nl-localizable="true"
+                    id="HtmlPage_htmlPage2.line3Part2">
+                à bien été pris en compte.
+              </span>
+            </div>
+          <% } else { %>
+            <div data-nl-localizable="true"
+                 id="HtmlPage_htmlPage2.line3">
+              Votre abonnement à bien été pris en compte.
+            </div>
+          <% } %>
+        </div>
+      </div>
+      <div id="footer" class="block">
+        <div class="footer-row">
+          <span data-nl-localizable="true" id="copyrightPart1">
+            Copyright ©
+          </span>
+          <span class="nl-dce-fragment nl-dce-done"
+                data-nl-name="BrandingWebSiteLink"
+                data-nl-localizable="true"
+                id="brandingWebSiteLink"
+                contenteditable="false">
+            Lien vers le site de la marque
+          </span>
+          <span data-nl-localizable="true" id="copyrightPart2">
+            , Tous droits réservés.
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
