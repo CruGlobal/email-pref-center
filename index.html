@@ -217,6 +217,7 @@
         width: 1em;
         height: 1em;
         text-align: center;
+        -webkit-transition: all .05s;
         transition: all .05s;
       }
       .element-content {
@@ -230,6 +231,7 @@
         position: absolute;
       }
       .accordion-checkbox:checked + .element-label::after {
+        -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
       }
       .accordion-checkbox:checked ~ .element-content {
