@@ -247,8 +247,8 @@
             Welcome,
           </div>
           <div>
-            <span id="addedSubscriptions"></span>
-            <span id="removedSubscriptions"></span>
+            <div id="addedSubscriptions" class="hidden"></div>
+            <div id="removedSubscriptions" class="hidden"></div>
             <span id="successfullySubscribed" class="hidden">
               Your subscription was successful!
             </span>
@@ -280,6 +280,7 @@
           let addedSubscriptions =
             sessionStorage.getItem('addedSubscriptions') || '';
           if (addedSubscriptions) {
+            unhideElement('addedSubscriptions');
             document.getElementById('addedSubscriptions').textContent =
               'You have successfully subscribed to the following services: ' +
                 JSON.parse(addedSubscriptions);
@@ -288,6 +289,7 @@
           let removedSubscriptions =
             sessionStorage.getItem('removedSubscriptions') || '';
           if (removedSubscriptions) {
+            unhideElement('removedSubscriptions');
             document.getElementById('removedSubscriptions').textContent =
               'You have successfully unsubscribed to the following services: ' +
                 JSON.parse(removedSubscriptions);
@@ -296,21 +298,25 @@
           sessionStorage.removeItem('addedSubscriptions');
           sessionStorage.removeItem('removedSubscriptions');
         } else {
-          let span = document.getElementById('successfullySubscribed');
+          unhideElement('successfullySubscribed');
+        }
+      }
 
-          if (span.classList) {
-            span.classList.toggle('hidden');
+      function unhideElement(id) {
+        let element = document.getElementById(id);
+
+        if (element.classList) {
+          element.classList.toggle('hidden');
+        } else {
+          // For IE9
+          var classes = element.className.split(' ');
+          var i = classes.indexOf('hidden');
+
+          if (i >= 0) {
+            classes.splice(i, 1);
           } else {
-            // For IE9
-            var classes = span.className.split(' ');
-            var i = classes.indexOf('hidden');
-
-            if (i >= 0) {
-              classes.splice(i, 1);
-            } else {
-              classes.push('hidden');
-              span.className = classes.join(' ');
-            }
+            classes.push('hidden');
+            element.className = classes.join(' ');
           }
         }
       }
