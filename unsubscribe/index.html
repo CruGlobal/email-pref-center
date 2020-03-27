@@ -160,6 +160,23 @@
         width: 200px;
         height: 122px;
       }
+
+      .button-container {
+        display: flex;
+      }
+      .button-container input, .button-container a {
+        flex: 0 0 50%;
+      }
+
+      #manage-preferences {
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+      }
+      #manage-preferences span {
+        flex: 0 0 100%;
+      }
+
     </style>
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -214,7 +231,7 @@
             or click "Manage Preferences" to select more relevant
             communications that interest you.
           </p>
-          <div>
+          <div class="button-container">
             <input type="submit"
                    value="Confirm Unsubscribe"
                    class="submit nl-dce-done"
