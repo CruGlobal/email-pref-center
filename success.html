@@ -201,9 +201,14 @@
           text-align: center;
         }
       }
+
+      /* Custom */
+      .hidden {
+        display: none;
+      }
     </style>
   </head>
-  <body style="" class="">
+  <body onload="determineUpdatedSubscriptions()">
     <div id="wrap" class="block">
       <div id="header" class="radius section block">
         <div class="header-text header-title section">
@@ -241,28 +246,13 @@
                class="sub-title title">
             Welcome,
           </div>
-          <% if(context.service.label) {%>
-            <div>
-              <span data-nl-localizable="true"
-                    id="HtmlPage_htmlPage2.line3Part1">
-                Your subscription to the service
-              </span>
-              <span data-nl-localizable="true"
-                    id="label"
-                    class="nl-dce-field nl-dce-done"
-                    data-nl-expr="/context/service/label"
-                    contenteditable="false">Label</span>
-              <span data-nl-localizable="true"
-                    id="HtmlPage_htmlPage2.line3Part2">
-                was successful!
-              </span>
-            </div>
-          <% } else { %>
-            <div data-nl-localizable="true"
-                 id="HtmlPage_htmlPage2.line3">
+          <div>
+            <span id="addedSubscriptions"></span>
+            <span id="removedSubscriptions"></span>
+            <span id="successfullySubscribed" class="hidden">
               Your subscription was successful!
-            </div>
-          <% } %>
+            </span>
+          </div>
         </div>
       </div>
       <div id="footer" class="block">
@@ -283,5 +273,47 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function determineUpdatedSubscriptions() {
+        if (sessionStorage) {
+          let addedSubscriptions =
+            sessionStorage.getItem('addedSubscriptions') || '';
+          if (addedSubscriptions) {
+            document.getElementById('addedSubscriptions').textContent =
+              'You have successfully subscribed to the following services: ' +
+                JSON.parse(addedSubscriptions);
+          }
+
+          let removedSubscriptions =
+            sessionStorage.getItem('removedSubscriptions') || '';
+          if (removedSubscriptions) {
+            document.getElementById('removedSubscriptions').textContent =
+              'You have successfully unsubscribed to the following services: ' +
+                JSON.parse(removedSubscriptions);
+          }
+
+          sessionStorage.removeItem('addedSubscriptions');
+          sessionStorage.removeItem('removedSubscriptions');
+        } else {
+          let span = document.getElementById('successfullySubscribed');
+
+          if (span.classList) {
+            span.classList.toggle('hidden');
+          } else {
+            // For IE9
+            var classes = span.className.split(' ');
+            var i = classes.indexOf('hidden');
+
+            if (i >= 0) {
+              classes.splice(i, 1);
+            } else {
+              classes.push('hidden');
+              span.className = classes.join(' ');
+            }
+          }
+        }
+      }
+    </script>
   </body>
 </html>
