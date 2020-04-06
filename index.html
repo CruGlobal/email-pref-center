@@ -188,12 +188,16 @@
       .preference-choice-header {
         font-weight: 600;
         font-size: 1.1em;
+        display: flex;
       }
       .preference-choice-header input[type="checkbox"] {
         margin-right: 5px;
       }
       .preference-choice-description {
-        margin-left: 22px;
+        margin-left: 21px;
+      }
+      .accordion .preference-choice-description {
+        margin-left: 20px;
       }
       .preference-choice {
         margin-left: 20px;
@@ -340,96 +344,91 @@
             </div>
             <!-- List1 -->
             <div class="preference-choice" data-nl-format="datetime">
-              <input type="checkbox"
-                        id="ch1"
-                        class="nl-dce-done"
-                        data-nl-checkboxbehavior="subscription"
-                        data-nl-bindto="service"
-                        onclick="togglePreference(this)"
-                        data-nl-servicename="USCommSubscription1"
-                        data-nl-servicelabel="Cru Storylines Newsletter"
-                        data-service-label="Cru Storylines" />
               <span class="preference-choice-header" style="color: #030303;">
+                <input type="checkbox"
+                       id="ch1"
+                       class="nl-dce-done"
+                       data-nl-checkboxbehavior="subscription"
+                       data-nl-bindto="service"
+                       onclick="togglePreference(this)"
+                       data-nl-servicename="USCommSubscription1"
+                       data-nl-servicelabel="Cru Storylines Newsletter"
+                       data-service-label="Cru Storylines" />
                 Cru Storylines
               </span>
-               <br />
-               <span class="preference-choice-description">
-                 Discover what God is doing around the world.
-               </span>
+              <div class="preference-choice-description">
+                Discover what God is doing around the world.
+              </div>
              </div>
             <!-- List2 -->
             <div class="preference-choice" data-nl-format="datetime">
-              <input type="checkbox"
-                     id="ch2"
-                     class="nl-dce-done"
-                     data-nl-checkboxbehavior="subscription"
-                     data-nl-bindto="service"
-                     onclick="togglePreference(this)"
-                     data-nl-servicename="cruUSDevService"
-                     data-nl-servicelabel="US Dev"
-                     data-service-label="Cru Greatest Ministry Needs" />
               <span class="preference-choice-header" style="color: #0d0c0c;">
+                <input type="checkbox"
+                       id="ch2"
+                       class="nl-dce-done"
+                       data-nl-checkboxbehavior="subscription"
+                       data-nl-bindto="service"
+                       onclick="togglePreference(this)"
+                       data-nl-servicename="cruUSDevService"
+                       data-nl-servicelabel="US Dev"
+                       data-service-label="Cru Greatest Ministry Needs" />
                 Cru Greatest Ministry Needs
               </span>
-              <br />
-              <span class="preference-choice-description">
+              <div class="preference-choice-description">
                 Frontline reports &amp; opportunities to partner financially.
-              </span>
+              </div>
             </div>
             <!-- List3 -->
             <div class="preference-choice" data-nl-format="datetime">
-              <input type="checkbox"
-                      id="ch3"
-                      class="nl-dce-done"
-                      data-nl-checkboxbehavior="subscription"
-                      data-nl-bindto="service"
-                      onclick="togglePreference(this)"
-                      data-nl-servicename="CruStoreSVC97"
-                      data-nl-servicelabel="Cru Store Newsletter"
-                      data-service-label="Cru Store" />
               <span class="preference-choice-header" style="color: #0d0c0c;">
+                <input type="checkbox"
+                       id="ch3"
+                       class="nl-dce-done"
+                       data-nl-checkboxbehavior="subscription"
+                       data-nl-bindto="service"
+                       onclick="togglePreference(this)"
+                       data-nl-servicename="CruStoreSVC97"
+                       data-nl-servicelabel="Cru Store Newsletter"
+                       data-service-label="Cru Store" />
                 Cru Store
               </span>
-              <br />
-              <span class="preference-choice-description">
+              <div class="preference-choice-description">
                 Updates on new releases and discounts.
-              </span>
+              </div>
             </div>
             <div class="preference-choice" data-nl-format="datetime">
-              <input type="checkbox"
-                      id="ch4"
-                      class="nl-dce-done"
-                      data-nl-checkboxbehavior="subscription"
-                      data-nl-bindto="service"
-                      onclick="togglePreference(this)"
-                      data-nl-servicename="SVCDMCRUORG"
-                      data-nl-servicelabel="Digital Marketing - Cru.org"
-                      data-service-label="Cru Resources" />
               <span class="preference-choice-header" style="color: #0d0c0c;">
+                <input type="checkbox"
+                       id="ch4"
+                       class="nl-dce-done"
+                       data-nl-checkboxbehavior="subscription"
+                       data-nl-bindto="service"
+                       onclick="togglePreference(this)"
+                       data-nl-servicename="SVCDMCRUORG"
+                       data-nl-servicelabel="Digital Marketing - Cru.org"
+                       data-service-label="Cru Resources" />
                 Cru Resources
               </span>
-              <br />
-              <span class="preference-choice-description">
+              <div class="preference-choice-description">
                 The latest and best resources from Cru.
-              </span>
+              </div>
             </div>
             <div class="preference-choice" data-nl-format="datetime">
-              <input type="checkbox"
-                      id="ch5"
-                      class="nl-dce-done"
-                      data-nl-checkboxbehavior="subscription"
-                      data-nl-bindto="service"
-                      onclick="togglePreference(this)"
-                      data-nl-servicename="TCFNewsletter"
-                      data-nl-servicelabel="Cru Foundation Newsletter"
-                      data-service-label="Cru Foundation" />
               <span class="preference-choice-header" style="color: #0d0c0c;">
+                <input type="checkbox"
+                       id="ch5"
+                       class="nl-dce-done"
+                       data-nl-checkboxbehavior="subscription"
+                       data-nl-bindto="service"
+                       onclick="togglePreference(this)"
+                       data-nl-servicename="TCFNewsletter"
+                       data-nl-servicelabel="Cru Foundation Newsletter"
+                       data-service-label="Cru Foundation" />
                 Cru Foundation
               </span>
-              <br />
-              <span class="preference-choice-description">
+              <div class="preference-choice-description">
                 Inspiration and strategies for effective Kingdom giving.
-              </span>
+              </div>
             </div>
             <div class="accordion">
               <div class="accordion-element">
@@ -453,10 +452,9 @@
                              data-service-label="Campus Frontline Reports &amp; Opportunities" />
                       Frontline Reports &amp; Opportunities
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Reach students by partnering financially.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -483,10 +481,9 @@
                              data-service-label="Cru Military Frontline Reports &amp; Opportunities" />
                       Frontline Reports &amp; Opportunities
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Reach military communities by partnering financially.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -501,11 +498,10 @@
                              data-service-label="Cru Military Prayer Guide" />
                       Prayer Guide
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Minister through prayer for military families and
                       outreach.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -532,10 +528,9 @@
                              data-service-label="Sports ministry news from around the world" />
                       Sports ministry news from around the world
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Ministry updates from AIA.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -550,10 +545,9 @@
                              data-service-label="AIA Special Projects &amp; Promotions" />
                       Special Projects &amp; Promotions
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Opportunities from friends of AIA.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -568,10 +562,9 @@
                              data-service-label="Sport-culture articles" />
                       Sport-culture articles
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       A weekly summary of new articles from AIA.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -586,10 +579,9 @@
                              data-service-label="AIA Financial Partnership Opportunities" />
                       Financial Partnership Opportunities
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Join the mission of AIA through financial partnership.
-                    </span>
+                    </div>
                   </div>
                   <p class="small-header">
                     Give me resources about:
@@ -607,10 +599,9 @@
                              data-service-label="Becoming an Athlete of Influence" />
                       Becoming an Athlete of Influence
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Help athletes lead themselves and their teams.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -625,10 +616,9 @@
                              data-service-label="AIA Coaching for Character" />
                       Coaching for Character
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       For coaches who want to do more than win.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -643,10 +633,9 @@
                              data-service-label="Redeeming Youth-Sports Culture" />
                       Redeeming Youth-Sports Culture
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Make youth-sports culture part of God's kingdom.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -661,10 +650,9 @@
                              data-service-label="Sports Ministry for Everyone" />
                       Sports Ministry for Everyone
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Use your voice in sports to make an eternal impact.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -691,10 +679,9 @@
                              data-service-label="Jesus Film Project News" />
                       Jesus Film Project News
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Important updates, resources &amp; news.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -709,10 +696,9 @@
                              data-service-label="Jesus Film Project Frontline Reports &amp; Opportunities" />
                       Frontline Reports &amp; Opportunities
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Reach the world by partnering financially.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -727,10 +713,9 @@
                              data-service-label="Jesus Film Project Partnerships" />
                       Partnerships
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Discover how we can help accelarate your ministry.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -745,10 +730,9 @@
                              data-service-label="Jesus Film Project Prayer" />
                       Prayer
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Join a global prayer network.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -763,10 +747,9 @@
                              data-service-label="Jesus Film Project Mission Trips" />
                       Mission Trips
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Info on mission trips.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -781,10 +764,9 @@
                              data-service-label="Jesus Film Project Resource Highlights" />
                       Resource Highlights
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Updates on our resources and tools.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -799,10 +781,9 @@
                              data-service-label="Jesus Film Project Women's Initiatives" />
                       Womens Initiatives
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Connect with women and share your faith.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -829,10 +810,9 @@
                              data-service-label="Josh McDowell Ministry General Newsletter" />
                       Newsletter
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Important updates, resources &amp; news.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -847,10 +827,9 @@
                              data-service-label="Josh McDowell Ministry Frontline Reports &amp; Opportunities" />
                       Frontline Reports &amp; Opportunities
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Reach the world by partnering financially.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -865,10 +844,9 @@
                              data-service-label="Josh McDowell Ministry Resources" />
                       Resources
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       The latest and best resources from Josh McDowell Ministry.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -883,10 +861,9 @@
                              data-service-label="Josh McDowell Ministry Upcoming Events" />
                       Upcoming Events
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Get notified when an event is near you.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -901,10 +878,9 @@
                              data-service-label="Josh McDowell Ministry Resolution Movement" />
                       Resolution Movement
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Important <em>Resolution</em> updates, resources &amp; news.
-                    </span>
+                    </div>
                   </div>
                   <div class="preference-choice" data-nl-format="datetime">
                     <span class="preference-choice-header" style="color: #030303;">
@@ -919,10 +895,9 @@
                              data-service-label="Josh McDowell Ministry Daily Devotion" />
                       Daily Devotion
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Daily inspiration and teaching for youth and families.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -949,10 +924,9 @@
                              data-service-label="StoryRunners News" />
                       StoryRunners News
                     </span>
-                    <br />
-                    <span class="preference-choice-description">
+                    <div class="preference-choice-description">
                       Important ministry updates, resources &amp; news.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
