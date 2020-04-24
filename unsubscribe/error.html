@@ -15,10 +15,6 @@ body {
 	font-family: Arial,Helvetica, sans-serif;
 }
 
-.logo {
-	margin: 0 0 10px 0;
-}
-
 #container {
 	margin: 100px auto;
 	width: 560px;
@@ -63,40 +59,6 @@ h1 {
 
 label { width: 300px;  }
 label.error { float: left; color: red; margin: 10px 0 0 35px;}
-
-.submit {
-	background: #f9b925;
-	border: none;
-	width: 150px;
-	height: 35px;
-	margin: 10px 0 0 -10px;
-	color: #FFF;
-		cursor: pointer;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-
-.submit:hover {
-	background: #777;
-	border: 1px solid #ccc;
-}
-
-#email {
-	width: 250px;
-	margin-top: 10px;
-	padding: 5px;
-	border: 1px #666 solid;
-	color: #777;
-	text-align: center;
-}
-#email:hover {
-	border: 1px #999 solid;
-}
-
-#subscribe-form {
-	width: 370px;
-	margin: 20px auto;
-}
 </style>
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -158,13 +120,5 @@ label.error { float: left; color: red; margin: 10px 0 0 35px;}
         <!-- End Message -->
     </div>
     <!-- End Container -->
-    <script type="text/javascript">// <![CDATA[
-    $(document).ready(function(){
-        $("#email").click(function(){ $(this).attr({ value: '' }); });
-      $("#subscribe-form").validate();
-    });
-    // ]
-                ]>
-    // ]]></script>
 </body>
 </html>
