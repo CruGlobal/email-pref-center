@@ -945,45 +945,44 @@
 
           let serviceName = element.getAttribute('data-service-label');
           if (element.checked) {
-            let found = false;
-            removedSubscriptions = removedSubscriptions.filter((value) => {
-              if (value === serviceName) {
-                found = true;
-              }
-              return !found;
-            });
-
-            if (found) {
+            if (hasValue(removedSubscriptions, serviceName)) {
               sessionStorage.setItem(
                 'removedSubscriptions',
                 JSON.stringify(removedSubscriptions));
             } else {
-              addedSubscriptions.push(serviceName);
+              if (!hasValue(addedSubscriptions, serviceName)) {
+                addedSubscriptions.push(serviceName);
+              }
               sessionStorage.setItem(
                 'addedSubscriptions',
                 JSON.stringify(addedSubscriptions));
             }
           } else {
-            let found = false;
-            addedSubscriptions = addedSubscriptions.filter((value) => {
-              if (value === serviceName) {
-                found = true;
-              }
-              return !found;
-            });
-
-            if (found) {
+            if (hasValue(addedSubscriptions, serviceName)) {
               sessionStorage.setItem(
                 'addedSubscriptions',
                 JSON.stringify(addedSubscriptions));
             } else {
-              removedSubscriptions.push(serviceName);
+              if (!hasValue(removedSubscriptions, serviceName)) {
+                removedSubscriptions.push(serviceName);
+              }
               sessionStorage.setItem(
                 'removedSubscriptions',
                 JSON.stringify(removedSubscriptions));
             }
           }
         }
+      }
+
+      function hasValue(array, serviceName) {
+        let found = false;
+        array.filter((value) => {
+          if (value === serviceName) {
+            found = true;
+          }
+          return !found;
+        })
+        return found
       }
 
       function getItemFromStorage(key) {
