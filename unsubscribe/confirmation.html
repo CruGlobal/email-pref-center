@@ -20,11 +20,18 @@
       }
 
       #message {
-        background: #eee;
-        border: 1px solid #ccc;
-        padding: 15px;
+        background-color: #eeeeee;
+        background-position: left top;
+        background-repeat: repeat;
+        border: 0 none #cccccc;
+        padding: 20px 15px;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
+        position: static;
+        width: 530px;
+        height: 166px;
+        left: 0;
+        top: 0;
       }
 
 
@@ -37,6 +44,24 @@
 
       a:hover {
         color:#9dcb3b;
+      }
+
+      /* Logo */
+      .logo {
+        padding-bottom: 20px;
+        width: 200px;
+        height: 150px;
+        position: static;
+        left: 0;
+        top: 0;
+      }
+
+      /* Text */
+      .fs-16 {
+        font-size: 16px;
+      }
+      .fs-18 {
+        font-size: 18px;
       }
 
       /* Type */
@@ -67,51 +92,64 @@
       .mcnButtonBlockInner {
         vertical-align: top;
         text-align: center;
+        padding: 0 18px 18px;
       }
       .mcnButtonContent {
         vertical-align: middle;
         text-align: center;
+        font-family: Arial, serif;
+        padding: 10px;
+      }
+      .mcnButtonContentContainer {
+        border-collapse: separate !important;
+        border: 2px none #707070;
+        border-radius: 5px;
+        background-color: #007fa4;
+        margin: 0 auto;
+      }
+      .mcnButton {
+        font-weight: bold;
+        letter-spacing: normal;
+        line-height: 100%;
+        text-align: center;
+        text-decoration: none !important;
+        color: #ffffff !important;
       }
     </style>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <link rel="shortcut icon" href="data:image/webp;base64,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">
 
   </head>
-  <body style="" class="">
+  <body>
     <!-- Start Container -->
     <div id="container">
       <!-- Start Logo -->
       <a href="https://www.cru.org" title="Visit Cru">
         <img src="http://res.e.cru.org/res/cru_mkt_prod1/3fae97d22eb666faac6e169739f5766ab7bc44bc46977c75adeb7c121aa20310.png"
-             alt="Cru Global Strategy Newsletter"
-             class="Cru Global Strategies"
+             alt="Visit Cru"
+             class="logo"
              height="150"
-             width="200"
-             style="padding-bottom: 20px; width: 200px; height: 150px; position: static; left: 0; top: 0;" />
+             width="200" />
       </a>
       <!-- End Logo -->
       <!-- Start Message -->
-      <div id="message"
-           style="border: 0 none #cccccc; position: static; width: 530px; height: 166px; left: 0; top: 0; background-color: #eeeeee; background-position: left top; background-repeat: repeat; padding-top: 20px; padding-bottom: 20px;">
-        <p style="font-size: 18px;">You have been removed from this Cru email list.</p>
-        <p style="font-size: 16px;" data-nl-format="datetime">We're sorry to see you go!</p>
+      <div id="message">
+        <p class="fs-18">You have been removed from this Cru email list.</p>
+        <p class="fs-16" data-nl-format="datetime">We're sorry to see you go!</p>
         <br />
         <table class="mcnButtonBlock">
           <tbody class="mcnButtonBlockOuter">
             <tr>
-              <td style="padding-top: 0; padding-right: 18px; padding-bottom: 18px; padding-left: 18px;" class="mcnButtonBlockInner">
-                <table class="mcnButtonContentContainer"
-                       style="border-collapse: separate !important; border: 2px none #707070; border-radius: 5px; background-color: #007fa4;">
+              <td class="mcnButtonBlockInner">
+                <table class="mcnButtonContentContainer">
                   <tbody>
                     <tr>
-                      <td class="mcnButtonContent"
-                          style="font-family: Arial; font-size: 16px; padding: 10px;"
+                      <td class="mcnButtonContent fs-16"
                           data-nl-format="datetime">
                         <a class="mcnButton"
                            title="Visit Cru.org"
                            href="https://www.cru.org"
-                           target="_blank"
-                           style="font-weight: bold; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #ffffff;">Visit Cru.org</a>
+                           target="_blank">Visit Cru.org</a>
                       </td>
                     </tr>
                   </tbody>
