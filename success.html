@@ -148,7 +148,16 @@
             <div id="addedSubscriptions" class="hidden"></div>
             <div id="removedSubscriptions" class="hidden"></div>
             <span id="successfullySubscribed" class="hidden">
-              Your subscription was successful!
+              Success! You have updated your preferences.
+            </span>
+            <span id="successfullySubscribedSubtext" class="hidden">
+              The email preferences for
+              <span class="nl-dce-done"
+                    type="email"
+                    id="email"
+                    name="email"
+                    data-nl-xpath="/context/profile/email"></span>
+              have been changed.
             </span>
           </div>
           <div class="button-wrapper">
@@ -206,6 +215,7 @@
           sessionStorage.removeItem('removedSubscriptions');
         } else {
           unhideElement('successfullySubscribed');
+          unhideElement('successfullySubscribedSubtext');
         }
       }
 
