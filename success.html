@@ -105,6 +105,13 @@
         text-align: center;
       }
 
+      .dark-gray {
+        color: #555555;
+      }
+      .mid-gray {
+        color: #777777;
+      }
+
       .privacy {
         padding: 20px;
       }
@@ -113,6 +120,16 @@
       }
       .privacy a {
         text-decoration: none;
+      }
+
+      .successfully-subscribed {
+        font-size: 1.5em;
+        font-weight:bold;
+        margin-bottom: 0;
+      }
+      .successfully-subscribed-subtext {
+        font-size: 1.2em;
+        margin-top: 5px;
       }
 
       @media screen and (max-width: 610px) {
@@ -125,14 +142,9 @@
           width: 100%;
         }
       }
-
-      /* Custom */
-      .hidden {
-        display: none;
-      }
     </style>
   </head>
-  <body onload="determineUpdatedSubscriptions()">
+  <body>
     <div id="wrap" class="block">
       <div id="header" class="radius section block center">
         <span class="nl-dce-fragment nl-dce-done"
@@ -146,25 +158,22 @@
       </div>
       <div id="content" class="radius section">
         <div class="info">
-          <div>
-            <div id="addedSubscriptions" class="hidden"></div>
-            <div id="removedSubscriptions" class="hidden"></div>
-            <span id="successfullySubscribed" class="hidden">
+          <div class="center">
+            <p class="successfully-subscribed dark-gray">
               Success! You have updated your preferences.
-            </span>
-            <span id="successfullySubscribedSubtext" class="hidden">
+            </p>
+            <p class="successfully-subscribed-subtext mid-gray">
               The email preferences for
-              <span class="nl-dce-done"
-                    type="email"
-                    id="email"
-                    name="email"
-                    data-nl-xpath="/context/profile/email"></span>
+              <span class="nl-dce-field nl-dce-done"
+                    id="span159300713819925"
+                    data-nl-expr="/context/profile/email"
+                    data-nl-type="string">Email</span>
               have been changed.
-            </span>
+            </p>
           </div>
           <div class="button-wrapper">
             <a href="#"
-               class="uppercase back-link"
+               class="uppercase back-link mid-gray"
                data-nl-type="action"
                data-nl-format="datetime"
                data-nl-action="previous"
@@ -207,54 +216,5 @@
         </div>
       </div>
     </div>
-
-    <script type="text/javascript">
-      function determineUpdatedSubscriptions() {
-        if (sessionStorage) {
-          let addedSubscriptions =
-            sessionStorage.getItem('addedSubscriptions') || '';
-          if (addedSubscriptions) {
-            unhideElement('addedSubscriptions');
-            document.getElementById('addedSubscriptions').textContent =
-              'You have successfully subscribed to the following services: ' +
-                JSON.parse(addedSubscriptions);
-          }
-
-          let removedSubscriptions =
-            sessionStorage.getItem('removedSubscriptions') || '';
-          if (removedSubscriptions) {
-            unhideElement('removedSubscriptions');
-            document.getElementById('removedSubscriptions').textContent =
-              'You have successfully unsubscribed to the following services: ' +
-                JSON.parse(removedSubscriptions);
-          }
-
-          sessionStorage.removeItem('addedSubscriptions');
-          sessionStorage.removeItem('removedSubscriptions');
-        } else {
-          unhideElement('successfullySubscribed');
-          unhideElement('successfullySubscribedSubtext');
-        }
-      }
-
-      function unhideElement(id) {
-        let element = document.getElementById(id);
-
-        if (element.classList) {
-          element.classList.toggle('hidden');
-        } else {
-          // For IE9
-          const classes = element.className.split(' ');
-          const i = classes.indexOf('hidden');
-
-          if (i >= 0) {
-            classes.splice(i, 1);
-          } else {
-            classes.push('hidden');
-            element.className = classes.join(' ');
-          }
-        }
-      }
-    </script>
   </body>
 </html>
