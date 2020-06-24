@@ -32,26 +32,10 @@
       }
 
       /* header area */
-
-      .header-text {
-        font-size: 34px;
-        line-height: 34px;
-        color: #BBB;
-        margin: 25px 25px 20px;
+      #header img {
+        display: inline-block !important;
+        margin-top: 40px;
       }
-
-      .header-title {
-        float: left;
-      }
-
-      .header-subtitle {
-        float: right;
-        font-size:24px;
-        line-height:24px;
-        font-weight:300;
-        color:#777777;
-      }
-
 
       /* content */
       #content {
@@ -117,6 +101,10 @@
         text-transform: uppercase;
       }
 
+      .center {
+        text-align: center;
+      }
+
       .privacy {
         padding: 20px;
       }
@@ -130,13 +118,8 @@
           margin: 0 auto;
         }
 
-        .banner {
+        #header img {
           width: 100%;
-        }
-
-        .header-text {
-          float: none;
-          line-height: inherit;
         }
       }
 
@@ -148,21 +131,15 @@
   </head>
   <body onload="determineUpdatedSubscriptions()">
     <div id="wrap" class="block">
-      <div id="header" class="radius section block">
-        <div class="header-text header-title section">
-          <span class="nl-dce-fragment nl-dce-done"
-                data-nl-name="BrandingLogo"
-                data-nl-label="Brand Logo (BrandingLogo)"
-                data-nl-localizable="true"
-                id="brandingLogo"
-                contenteditable="false">
+      <div id="header" class="radius section block center">
+        <span class="nl-dce-fragment nl-dce-done"
+              data-nl-name="BrandingLogo"
+              data-nl-label="Brand Logo (BrandingLogo)"
+              data-nl-localizable="true"
+              id="brandingLogo"
+              contenteditable="false">
             Brand Logo
-          </span>
-        </div>
-        <div class="header-text header-subtitle section"></div>
-        <img src="/nms/img/contentModels/main_default.jpg"
-             alt=""
-             class="banner" />
+        </span>
       </div>
       <div id="content" class="radius section">
         <div class="info">
