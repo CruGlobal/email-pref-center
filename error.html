@@ -32,50 +32,15 @@
       }
 
       /* header area */
-
-      .header-text {
-        font-size: 34px;
-        line-height: 34px;
-        color: #BBB;
-        margin: 25px 25px 20px;
+      #header img {
+        display: inline-block !important;
+        margin-top: 40px;
       }
-
-      .header-title {
-        float: left;
-      }
-
-      .header-subtitle {
-        float: right;
-        font-size:24px;
-        line-height:24px;
-        font-weight:300;
-        color:#777777;
-      }
-
 
       /* content */
       #content {
         font-size: 14px;
       }
-
-      #content .title {
-        font-size:18px;
-        line-height:22pt;
-        color:#333;
-        font-weight:normal;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #E2E2E2;
-        padding-bottom: 10px;
-      }
-
-      #content .sub-title {
-        border: none;
-        font-size:22px;
-        line-height:22pt;
-        color:#333;
-        font-weight:normal;
-      }
-
 
       #content .info {
         padding: 25px 25px 20px;
@@ -97,8 +62,83 @@
       }
 
 
-      .info .title {
-        margin-bottom: 4px;
+      .button {
+        border-radius: 10px;
+        color: white;
+        padding: 1px;
+        cursor:pointer;
+        text-align: center;
+        display: inline-block;
+        background: #378AD8;
+        background-image: linear-gradient(top, #348AD5, #378AD8);
+        background-image: -webkit-linear-gradient(top, #348AD5, #378AD8);
+        background-image: -moz-linear-gradient(top, #348AD5, #378AD8);
+        background-image: -ms-linear-gradient(top, #348AD5, #378AD8);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #348AD5), color-stop(100%, #378AD8));
+        box-shadow: 0 1px 4px #AAA;
+        margin: 35px 0 35px;
+      }
+
+      .button a {
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px;
+      }
+
+      .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+      }
+
+      .cru-button {
+        flex: 0 0 35%;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        margin-left: 20px;
+      }
+
+      .back-link {
+        flex: 0 0 40%;
+      }
+
+      .uppercase {
+        text-transform: uppercase;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .dark-gray {
+        color: #555555;
+      }
+      .mid-gray {
+        color: #777777;
+      }
+
+      .privacy {
+        padding: 20px;
+      }
+      .privacy p {
+        font-size: 0.7em;
+      }
+      .privacy a {
+        text-decoration: none;
+      }
+
+      .error-text {
+        font-size: 1.5em;
+        font-weight:bold;
+        margin-bottom: 0;
+      }
+      .error-subtext {
+        font-size: 1.1em;
+        margin-top: 5px;
+        margin-bottom: 15px;
       }
 
       @media screen and (max-width: 610px) {
@@ -106,52 +146,65 @@
           width: 100%;
           margin: 0 auto;
         }
-
-        .banner {
-          width: 100%;
-        }
-
-        .header-text {
-          float: none;
-          line-height: inherit;
-        }
       }
     </style>
   </head>
   <body>
     <div id="wrap" class="block">
-      <div id="header" class="radius section block">
-        <div class="header-text header-title section">
-          <span class="nl-dce-fragment nl-dce-done"
-                data-nl-name="BrandingLogo"
-                data-nl-label="Brand Logo (BrandingLogo)"
-                data-nl-localizable="true"
-                id="brandingLogo"
-                contenteditable="false">
+      <div id="header" class="radius section block center">
+        <span class="nl-dce-fragment nl-dce-done"
+              data-nl-name="BrandingLogo"
+              data-nl-label="Brand Logo (BrandingLogo)"
+              data-nl-localizable="true"
+              id="brandingLogo"
+              contenteditable="false">
             Brand Logo
-          </span>
-        </div>
-        <div class="header-text header-subtitle section"></div>
-        <img src="/nms/img/contentModels/main_default.jpg"
-             alt=""
-             class="banner" />
+        </span>
       </div>
       <div id="content" class="radius section">
         <div class="info">
-          <div class="title"
-               data-nl-localizable="true"
-               id="ErrorPage_errorPage.message">
-            An error has occurred
+          <div class="center">
+            <p class="error-text dark-gray">
+              Uh-oh! There was an error updating your preferences.
+            </p>
+            <p class="error-subtext mid-gray">
+              We were not able to update the email preferences for
+              <span class="nl-dce-field nl-dce-done"
+                    id="span159300713819925"
+                    data-nl-expr="/context/profile/email"
+                    data-nl-type="string">Email</span>.
+            </p>
+            <p class="error-subtext mid-gray">
+              Please try again, if error continues please contact support at <a href="tel:8882787233">(888)278-7233</a>
+              from 9:00 a.m. to 5:00 p.m. EST, Monday-Friday, or email us at
+              <a href="mailto:help@cru.org">help@cru.org</a>.
+            </p>
           </div>
-          <div class="sub-title title">
-            <span class="nl-dce-field nl-dce-done"
-                  data-nl-expr="/context/errorMessage"
-                  data-nl-localizable="true"
-                  id="ErrorPage_errorPage.detail"
-                  contenteditable="false">
-              Error details
-            </span>
+          <div class="button-wrapper">
+            <a href="#"
+               class="uppercase back-link mid-gray"
+               data-nl-type="action"
+               data-nl-format="datetime"
+               data-nl-action="previous"
+               onclick="location.href = document.referrer; return false;">Back to Edit Preferences</a>
+            <div class="button uppercase cru-button">
+              <a href="https://www.cru.org">Continue to cru.org</a>
+            </div>
           </div>
+        </div>
+        <div class="privacy">
+          <p>
+            We are committed to protecting and appropriately handling private
+            and personal information and take your privacy very seriously.
+            Learn more by reading our
+            <a href="https://www.cru.org/us/en/about/privacy.html">privacy policy</a>.
+          </p>
+          <p>
+            Need to update your email address or other info? Call us at
+            <a href="tel:8882787233">(888)278-7233</a>
+            from 9:00 a.m. to 5:00 p.m. EST, Monday-Friday, or
+            <a href="mailto:donation.services@cru.org">email us</a>.
+          </p>
         </div>
       </div>
       <div id="footer" class="block">
