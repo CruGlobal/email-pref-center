@@ -92,7 +92,7 @@
         background-image: -ms-linear-gradient(top, #348AD5, #378AD8);
         background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #348AD5), color-stop(100%, #378AD8));
         box-shadow: 0 1px 4px #AAA;
-        margin: 15px 0 35px;
+        margin: 35px 0 35px;
       }
 
       .button a {
@@ -100,6 +100,20 @@
         text-decoration: none;
         display: inline-block;
         padding: 10px;
+      }
+
+      .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cru-button, .back-link {
+        flex: 0 0 40%;
+      }
+
+      .uppercase {
+        text-transform: uppercase;
       }
 
       @media screen and (max-width: 610px) {
@@ -161,12 +175,14 @@
             </span>
           </div>
           <div class="button-wrapper">
-            <div class="button back-button">
-              <a href="#"
-                 data-nl-type="action"
-                 data-nl-format="datetime"
-                 data-nl-action="previous"
-                 onclick="location.href = document.referrer; return false;">Back to Preferences</a>
+            <a href="#"
+               class="uppercase back-link"
+               data-nl-type="action"
+               data-nl-format="datetime"
+               data-nl-action="previous"
+               onclick="location.href = document.referrer; return false;">Back to Edit Preferences</a>
+            <div class="button uppercase cru-button">
+              <a href="https://www.cru.org">Continue to cru.org</a>
             </div>
           </div>
         </div>
