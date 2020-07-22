@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
     <title data-nl-localizable="true">Subscription</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/regular.min.css" rel="stylesheet">
     <style type="text/css" media="all">
       * {
         box-sizing: border-box;
@@ -144,7 +146,7 @@
       /* Custom */
       #email {
         position: static;
-        width: 100%;
+        width: 60%;
         height: 100%;
         left: 0;
         top: 0;
@@ -157,6 +159,10 @@
       }
       .email-wrapper {
         margin-bottom: 10px;
+      }
+      .email-wrapper .fa-question-circle {
+        font-size:10px;
+        vertical-align: top;
       }
       .preference-choice-header {
         font-weight: 600;
@@ -309,6 +315,7 @@
                      readonly="readonly"
                      data-nl-bindto="xpath"
                      data-nl-checkboxbehavior="subscription" />
+              <i class="far fa-question-circle"></i>
             </div>
             <!-- List1 -->
             <div class="preference-choice" data-nl-format="datetime">
