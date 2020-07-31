@@ -954,5 +954,27 @@
         </div>
       </div>
     </div>
+
+    <script type="text/javascript">
+      window.onload = () => {
+        const checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked');
+        checkedBoxes.forEach((element) => {
+          const subscriptionIdPattern = /ch[0-9]+$/;
+          if (subscriptionIdPattern.test(element.id)) {
+
+            const possibleFormDiv = element.parentElement.parentElement.parentElement;
+            if (possibleFormDiv.getAttribute('class').indexOf('form') !== -1) {
+              // This means it is one of the checkboxes not under an accordion, so do nothing
+              return;
+            }
+            const accordionDiv = element.parentElement.parentElement.parentElement.parentElement;
+            if (accordionDiv.getAttribute('class').indexOf('accordion-element') !== -1) {
+              accordionDiv.firstElementChild.checked = true
+            }
+          }
+        })
+      }
+
+    </script>
   </body>
 </html>
