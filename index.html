@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
     <title data-nl-localizable="true">Subscription</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/regular.min.css" rel="stylesheet">
     <style type="text/css" media="all">
       * {
         box-sizing: border-box;
@@ -144,7 +146,7 @@
       /* Custom */
       #email {
         position: static;
-        width: 100%;
+        width: 60%;
         height: 100%;
         left: 0;
         top: 0;
@@ -157,6 +159,30 @@
       }
       .email-wrapper {
         margin-bottom: 10px;
+      }
+      .email-wrapper .fa-question-circle {
+        font-size:10px;
+        vertical-align: top;
+      }
+      .fa-question-circle:hover {
+        cursor: help;
+      }
+      .helptip-content {
+        display: none;
+        background: #FFFFFF;
+        margin-left: 10px;
+        padding: 10px;
+        position: absolute;
+        z-index: 1000;
+        max-width:200px;
+        border-radius: 7px;
+        border: .1em solid #000000;
+      }
+      .email-helptip {
+        display: inline-block;
+      }
+      .email-helptip:hover .helptip-content {
+        display: block;
       }
       .preference-choice-header {
         font-weight: 600;
@@ -309,6 +335,16 @@
                      readonly="readonly"
                      data-nl-bindto="xpath"
                      data-nl-checkboxbehavior="subscription" />
+              <div class="email-helptip">
+                <i class="far fa-question-circle"></i>
+                <div class="helptip-content">
+                    Need to update your email address or other info? Call us at
+                    <a href="tel:8882787233">(888)278-7233</a>
+                    from 9:00a.m. to 5:00p.m. EST, Monday-Friday, or
+                    <a href="mailto:donation.services@cru.org">email us</a>.
+                </div>
+              </div>
+
             </div>
             <!-- List1 -->
             <div class="preference-choice" data-nl-format="datetime">
