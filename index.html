@@ -181,7 +181,7 @@
       .email-helptip {
         display: inline-block;
       }
-      .email-helptip:hover .helptip-content {
+      .email-helptip:hover .helptip-content, .email-helptip-clicked .helptip-content {
         display: block;
       }
       .email-helptip .helptip-content:after {
@@ -343,7 +343,7 @@
                      readonly="readonly"
                      data-nl-bindto="xpath"
                      data-nl-checkboxbehavior="subscription" />
-              <div class="email-helptip">
+              <div id="email-helptip" class="email-helptip">
                 <i class="far fa-question-circle"></i>
                 <div class="helptip-content">
                   Need to update your email address or need further assistance? Email us at
@@ -1247,7 +1247,23 @@
           })
         }
 
+        const handleHelpTip = () => {
+          const helpTipClass = 'email-helptip';
+          const helpTip = document.getElementById(helpTipClass);
+          helpTip.onclick = () => {
+            const clicked = 'email-helptip-clicked';
+
+            const currentClasses = helpTip.getAttribute('class');
+            if (currentClasses.indexOf(clicked) !== -1) {
+              helpTip.setAttribute('class', helpTipClass);
+            } else {
+              helpTip.setAttribute('class', `${helpTipClass} ${clicked}`)
+            }
+          }
+        }
+
         checkAllSubscribed();
+        handleHelpTip();
       }
 
     </script>
